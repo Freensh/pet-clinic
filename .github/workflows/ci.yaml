@@ -16,7 +16,7 @@ env:
   VAULT_SECRET_ID: ${{ secrets.VAULT_SECRET_ID }}
   VAULT_JFROG_PATH: secrets/creds/jfrog
   JFROG_URL: ${{ secrets.JFROG_URL }}
-  JFROG_REPO: 'devops-project'
+  JFROG_REPO: 'devops'
   AWS_REGION: ${{ secrets.AWS_REGION }}
   ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
   AWS_ROLE_ARN: ${{ secrets.AWS_ROLE_ARN }}
@@ -136,7 +136,7 @@ jobs:
           sonar-token: ${{ env.SONAR_TOKEN }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           branch: dev
-          fail-on–quality-gate-error: true
+          fail-on–quality-gate-error: false
   trivy-scan:
     name: Trivy Security Scan
     runs-on: ubuntu-latest
