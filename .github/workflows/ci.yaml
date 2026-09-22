@@ -22,7 +22,7 @@ env:
   AWS_ROLE_ARN: ${{ secrets.AWS_ROLE_ARN }}
   ECS_CLUSTER: ${{ secrets.ECS_CLUSTER }}
   ECS_SERVICE: ${{ secrets.ECS_SERVICE }}
-  TASK_DEFINITION: 'pet-clinic-task'
+  TASK_DEFINITION: 'petclinic-task'
  
 jobs:
   gitleaks:
